@@ -14,3 +14,5 @@ git push -u origin master   //首次提交之前
 git status     //查看状态
 
 git show         //查看不同
+
+git push		//提交
