@@ -16,3 +16,5 @@ git status     //查看状态
 git show         //查看不同
 
 git push		//提交
+
+git pull		//更新
