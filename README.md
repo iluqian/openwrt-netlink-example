@@ -21,3 +21,8 @@ git pull		//更新
 
 git diff  //查看修改
 
+git branch  //查看本机默认使用的分支
+
+git branch -a //查看一共多少分支
+
+git checkout branch-1 //将本地分支切换到branch-1
