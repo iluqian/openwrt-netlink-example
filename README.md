@@ -26,3 +26,7 @@ git branch  //查看本机默认使用的分支
 git branch -a //查看一共多少分支
 
 git checkout branch-1 //将本地分支切换到branch-1
+
+git clone //clone 源码
+
+git clone -b branch-1 https://github.com/iluqian/openwrt-netlink-example.git  //下载一个分支到当前目录
