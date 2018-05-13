@@ -21,3 +21,7 @@ git pull		//更新
 
 git diff  //查看修改
 
+git config --global user.name "iluqian"
+
+git config --global user.email "liujie@bdcom.com.cn"
+
