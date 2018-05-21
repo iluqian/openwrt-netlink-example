@@ -11,12 +11,12 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 int gn;
 static void * threadFunc(void *arg)
 {
-	int i;
+	unsigned int i;
 	printf("thread ID is %lu \n",pthread_self());
 	//sleep(1);
 	for( i = 0; i<10000;i++)
 	{
-		usleep(100);
+		usleep(10000);
 		pthread_mutex_lock(&mutex);
 		gn++;
 		printf("pthread_self() = %lu,gn = %d\n",pthread_self(),gn);
@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 	pthread_join(pthid_1,NULL);
 	pthread_join(pthid_2,NULL);
 	pthread_join(pthid_3,NULL);
+//对于PTHREAD_MUTEX_INITIALIZER 静态初始化的互斥量，无需调用pthread_mutex_destory()
 	pthread_mutex_destroy(&mutex);
 	printf("Now gn = %d\n",gn);
 	return 0;
