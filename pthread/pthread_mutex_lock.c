@@ -22,7 +22,6 @@ static void * threadFunc(void *arg)
 		printf("pthread_self() = %lu,gn = %d\n",pthread_self(),gn);
 		pthread_mutex_unlock(&mutex);
 	}
-	printf("Now gn = %d\n",gn);
 
 	return NULL;
 }
@@ -40,5 +39,6 @@ int main(int argc, char *argv[])
 	pthread_join(pthid_2,NULL);
 	pthread_join(pthid_3,NULL);
 	pthread_mutex_destroy(&mutex);
+	printf("Now gn = %d\n",gn);
 	return 0;
 }
