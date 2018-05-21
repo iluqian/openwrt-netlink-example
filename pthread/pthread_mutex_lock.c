@@ -16,6 +16,7 @@ static void * threadFunc(void *arg)
 	//sleep(1);
 	for( i = 0; i<10000;i++)
 	{
+		usleep(100);
 		pthread_mutex_lock(&mutex);
 		gn++;
 		printf("pthread_self() = %lu,gn = %d\n",pthread_self(),gn);
