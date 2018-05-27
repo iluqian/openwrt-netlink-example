@@ -1,3 +1,14 @@
+/*
+ * 使用四个通用的文件io可以对所有类型的文件执行IO操作，例如：
+ * ./a.out test.old test.new
+ * ./a.out test.old /dev/tty
+ * ./a.out /dev/tty test.new
+ * ./a.out /dev/pts/16 /dev/tty
+ *
+ * */
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
