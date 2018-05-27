@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 			printf("[PID %ld] File \" %s \" doen't exist yet\n",(long)getpid(),argv[1]);
 			sleep(5);
 			puts("Done sleeping\n");
-			fd = open(argv[1],O_WRONLY|O_CREAT|O_EXCL, S_IRUSR|S_IWUSR);
+			fd = open(argv[1],O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
 			if(fd == -1)
 					perror("open");
 			printf("[PID %ld] created file \"%s \" exclusively\n", (long)getpid(),argv[1]);
